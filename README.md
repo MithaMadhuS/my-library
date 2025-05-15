@@ -67,47 +67,7 @@ NOTE:
 - when there is a change in lib run "npm run build" and the new lib changes will be reflected in the app
 
 # usage in other app (code)
-<<<<<<< Updated upstream
-`import React, { useContext } from 'react';
-import { ThemeContext } from '../context';
-import { formatDate, Button } from 'nxo-library';
-
-
-const Dashboard = () => {
-
-    
-    const context = useContext(ThemeContext);
-    let newDate = new Date()
-
-
-  if (!context) {
-    throw new Error("HomePage must be used within a ThemeProvider");
-  }
-
-  const { theme, toggleTheme } = context;
-
-  const style: React.CSSProperties = {
-    backgroundColor: theme === "light" ? "#fff" : "#333",
-    color: theme === "light" ? "#000" : "#fff",
-    padding: "2rem",
-  };
-
-  return (
-    <div style={style}>
-      <h1>Current Theme: {theme}</h1>
-      {/* <button onClick={toggleTheme}>Toggle Theme </button> */}
-      <p>{formatDate(newDate)}</p>
-      <Button label="Testing" onClick={toggleTheme}></Button>
-    </div>
-  );
-};
-
-export default Dashboard;
-`
-=======
-
 import { formatDate, Button } from 'nxo-library';
 let newDate = new Date()
 <p>{formatDate(newDate)}</p>
 <Button label="Testing" onClick={toggleTheme}></Button>
->>>>>>> Stashed changes
