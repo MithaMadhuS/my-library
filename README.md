@@ -46,29 +46,28 @@ my-shared-lib/
         - Allows importing CSS in components
 
 NOTE: 
-If you bundle React into your library, and the host app already has it, you’ll likely get errors like:
+- If you bundle React into your library, and the host app already has it, you’ll likely get errors like:
     - Invalid hook call
     - React is not defined
     - Conflicting react versions
-Using externals and peerDependencies avoids this problem by sharing React across your MFEs and shared library.
-You can also manually externalize only specific modules:
-
-If fine grain neede :
-externals: {
-  react: 'React',
-  'react-dom': 'ReactDOM',
-}
-But nodeExternals() is better when you want to skip all node_modules
+- Using externals and peerDependencies avoids this problem by sharing React across your MFEs and shared library.
+- You can also manually externalize only specific modules(If fine grain needed):
+    externals: {
+        react: 'React',
+        'react-dom': 'ReactDOM',
+    }
+- But nodeExternals() is better when you want to skip all node_modules
 
 # to link the local library to an application
-in lib folder
+- in lib folder
     - npm link
-in app folder 
+- in app folder 
     - npm link my-shared-lib
     - check in node-modules folder and by "npm list" cmd
-when there is a change in lib run "npm run build" and the new lib changes will be reflected in the app
+- when there is a change in lib run "npm run build" and the new lib changes will be reflected in the app
 
 # usage in other app (code)
+<<<<<<< Updated upstream
 `import React, { useContext } from 'react';
 import { ThemeContext } from '../context';
 import { formatDate, Button } from 'nxo-library';
@@ -105,3 +104,10 @@ const Dashboard = () => {
 
 export default Dashboard;
 `
+=======
+
+import { formatDate, Button } from 'nxo-library';
+let newDate = new Date()
+<p>{formatDate(newDate)}</p>
+<Button label="Testing" onClick={toggleTheme}></Button>
+>>>>>>> Stashed changes
