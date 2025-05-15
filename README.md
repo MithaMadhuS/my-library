@@ -69,7 +69,7 @@ in app folder
 when there is a change in lib run "npm run build" and the new lib changes will be reflected in the app
 
 # usage in other app (code)
-import React, { useContext } from 'react';
+`import React, { useContext } from 'react';
 import { ThemeContext } from '../context';
 import { formatDate, Button } from 'nxo-library';
 
@@ -104,3 +104,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+`
